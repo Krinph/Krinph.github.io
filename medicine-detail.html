@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>药品详情 - 智能药品售卖机</title>
+    <link rel="stylesheet" href="medicine-style.css">
+</head>
+<body>
+    <div class="container detail-container">
+        <header>
+            <h1>药品详情</h1>
+            <a href="medicine.html" class="back-btn">返回药品列表</a>
+        </header>
+        
+        <main class="medicine-detail">
+            <div class="medicine-detail-top">
+                <div class="medicine-detail-info">
+                    <h2 id="medicine-name">感冒灵颗粒</h2>
+                    <div class="medicine-price-large">
+                        <span class="price-symbol">¥</span>
+                        <span class="price-value" id="medicine-price">25.8</span>
+                    </div>
+                    <div class="medicine-sales-info">
+                        <span class="medicine-sales">月销 1200+</span>
+                        <span class="medicine-rating">评分: 4.8</span>
+                    </div>
+                    
+                    <div class="medicine-spec">
+                        <h3>规格</h3>
+                        <div class="spec-options">
+                            <div class="spec-option active">10袋/盒</div>
+                            <div class="spec-option">20袋/盒</div>
+                        </div>
+                    </div>
+                    
+                    <div class="medicine-quantity">
+                        <h3>数量</h3>
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="99" id="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                            <span class="stock">库存: 500盒</span>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn-add-cart">加入购物车</button>
+                        <button class="btn-buy-now">立即购买</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="medicine-detail-tabs">
+                <div class="tab-headers">
+                    <div class="tab-header active" data-tab="description">药品说明</div>
+                    <div class="tab-header" data-tab="usage">用法用量</div>
+                    <div class="tab-header" data-tab="caution">注意事项</div>
+                    <div class="tab-header" data-tab="reviews">用户评价</div>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-panel active" id="description">
+                        <h3>药品说明</h3>
+                        <p><strong>【药品名称】</strong>感冒灵颗粒</p>
+                        <p><strong>【主要成分】</strong>对乙酰氨基酚、咖啡因、人工牛黄、马来酸氯苯那敏等</p>
+                        <p><strong>【性状】</strong>本品为浅黄色至黄色的颗粒；气香，味甜、微苦。</p>
+                        <p><strong>【功能主治】</strong>解热镇痛。用于感冒引起的头痛、发热、鼻塞、流涕、咽痛等症状。</p>
+                        <p><strong>【规格】</strong>每袋装10克</p>
+                        <p><strong>【贮藏】</strong>密封保存。</p>
+                        <p><strong>【有效期】</strong>24个月</p>
+                        <p><strong>【批准文号】</strong>国药准字H12345678</p>
+                    </div>
+                    
+                    <div class="tab-panel" id="usage">
+                        <h3>用法用量</h3>
+                        <p><strong>【用法用量】</strong>口服。一次1袋，一日3次。</p>
+                        <p><strong>【用药方法】</strong>用开水冲服。</p>
+                        <p><strong>【疗程】</strong>一般感冒症状，连续服药不超过3天。如症状无改善，请咨询医师。</p>
+                    </div>
+                    
+                    <div class="tab-panel" id="caution">
+                        <h3>注意事项</h3>
+                        <p><strong>【禁忌】</strong>对本品过敏者禁用，药物过敏体质者慎用。</p>
+                        <p><strong>【注意事项】</strong></p>
+                        <ol>
+                            <li>不宜在空腹时服用。</li>
+                            <li>服药期间不得饮酒。</li>
+                            <li>高血压、心脏病、肝病、肾病、糖尿病、甲状腺功能亢进等慢性病患者应在医师指导下服用。</li>
+                            <li>儿童、孕妇及哺乳期妇女慎用，使用前请咨询医师或药师。</li>
+                            <li>服药3天症状无缓解，请立即就医。</li>
+                        </ol>
+                        <p><strong>【药物相互作用】</strong>如与其他药物同时使用可能会发生药物相互作用，详情请咨询医师或药师。</p>
+                    </div>
+                    
+                    <div class="tab-panel" id="reviews">
+                        <h3>用户评价</h3>
+                        <div class="review-summary">
+                            <div class="review-score">4.8</div>
+                            <div class="review-stars">
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star filled">★</span>
+                                <span class="star half-filled">★</span>
+                            </div>
+                            <div class="review-count">共 245 条评价</div>
+                        </div>
+                        
+                        <div class="review-list">
+                            <div class="review-item">
+                                <div class="review-user">
+                                    <img src="../../assets/images/medicine-placeholder.jpg" alt="用户头像" class="user-avatar" onerror="this.src='../../assets/images/medicine-placeholder.jpg'">
+                                    <span class="user-name">张先生</span>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-stars small">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <p class="review-text">效果很好，感冒症状一天就减轻了很多，包装也很方便携带。</p>
+                                    <p class="review-date">2023-05-15</p>
+                                </div>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-user">
+                                    <img src="../../assets/images/medicine-placeholder.jpg" alt="用户头像" class="user-avatar" onerror="this.src='../../assets/images/medicine-placeholder.jpg'">
+                                    <span class="user-name">李女士</span>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-stars small">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                    <p class="review-text">退烧效果不错，但是味道有点苦，建议改进一下口感。</p>
+                                    <p class="review-date">2023-04-28</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 智能药品售卖机系统</p>
+        </footer>
+    </div>
+    
+    <script src="medicine-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#f0f0f0"/>
+  <path d="M150 80 C 100 80, 70 120, 70 150 C 70 180, 100 220, 150 220 C 200 220, 230 180, 230 150 C 230 120, 200 80, 150 80 Z" fill="#e0e0e0" stroke="#cccccc" stroke-width="2"/>
+  <rect x="120" y="130" width="60" height="10" fill="#cccccc"/>
+  <rect x="145" y="105" width="10" height="60" fill="#cccccc"/>
+  <text x="150" y="260" font-family="Arial" font-size="14" text-anchor="middle" fill="#999999">药品图片</text>
+</svg>

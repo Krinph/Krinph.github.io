@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录 - 智能药品售卖机</title>
+    <link rel="stylesheet" href="user_style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>用户登录</h1>
+            <p>欢迎使用智能药品售卖机</p>
+            <a href="index.html" class="back-btn">返回首页</a>
+        </header>
+        
+        <main class="login-form">
+            <form id="loginForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" name="username" required placeholder="请输入用户名">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" name="password" required placeholder="请输入密码">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-login" onclick="window.location.href='detail.html'">登录</button>
+                    <div class="form-links">
+                        <a href="#">忘记密码？</a>
+                        <a href="#">立即注册</a>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="other-login">
+                <p class="divider">其他登录方式</p>
+                <div class="login-options">
+                    <div class="login-option" onclick="window.location.href='detail.html'">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 20V19C5 16.7909 6.79086 15 9 15H15C17.2091 15 19 16.7909 19 19V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 8V5C16 3.34315 14.6569 2 13 2H11C9.34315 2 8 3.34315 8 5V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span>手机号登录</span>
+                    </div>
+                    
+                    <div class="login-option" onclick="window.location.href='detail.html'">
+                        <div class="icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 20V19C5 16.7909 6.79086 15 9 15H15C17.2091 15 19 16.7909 19 19V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 6H21M18 9H21M18 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span>微信登录</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 智能药品售卖机系统</p>
+        </footer>
+    </div>
+</body>
+</html>

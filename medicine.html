@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>药品购买 - 智能药品售卖机</title>
+    <link rel="stylesheet" href="medicine-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>药品购买</h1>
+            <p>浏览并选择您需要的药品</p>
+            <a href="index.html" class="back-btn">返回首页</a>
+        </header>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="搜索药品..." id="search-input">
+            <button id="search-btn">搜索</button>
+        </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const medicineItems = document.querySelectorAll('.medicine-item');
+                medicineItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        window.location.href = 'medicine-detail.html';
+                    });
+                });
+            });
+        </script>
+        
+        <div class="filter-options">
+            <select id="category-filter">
+                <option value="all">所有分类</option>
+                <option value="cold">感冒药</option>
+                <option value="fever">退烧药</option>
+                <option value="pain">止痛药</option>
+                <option value="stomach">胃肠药</option>
+                <option value="vitamin">维生素</option>
+            </select>
+            
+            <select id="sort-option">
+                <option value="default">默认排序</option>
+                <option value="price-asc">价格从低到高</option>
+                <option value="price-desc">价格从高到低</option>
+                <option value="sales">销量优先</option>
+            </select>
+        </div>
+        
+        <main class="medicine-list">
+            <!-- 药品列表 -->
+            <div class="medicine-item" data-id="1" data-category="cold">
+                
+                <div class="medicine-info">
+                    <h3>感冒灵颗粒</h3>
+                    <p class="medicine-brief">用于感冒引起的头痛、发热、鼻塞症状</p>
+                    <div class="medicine-price-box">
+                        <span class="medicine-price">¥25.8</span>
+                        <span class="medicine-sales">月销 1200+</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="medicine-item" data-id="2" data-category="fever">
+                
+                <div class="medicine-info">
+                    <h3>布洛芬片</h3>
+                    <p class="medicine-brief">用于缓解轻至中度疼痛，也可用于退热</p>
+                    <div class="medicine-price-box">
+                        <span class="medicine-price">¥18.5</span>
+                        <span class="medicine-sales">月销 980+</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="medicine-item" data-id="3" data-category="stomach">
+                
+                <div class="medicine-info">
+                    <h3>胃舒平片</h3>
+                    <p class="medicine-brief">用于胃痛、胃酸过多、消化不良症状</p>
+                    <div class="medicine-price-box">
+                        <span class="medicine-price">¥32.0</span>
+                        <span class="medicine-sales">月销 850+</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="medicine-item" data-id="4" data-category="pain">
+                
+                <div class="medicine-info">
+                    <h3>双氯芬酸钠缓释片</h3>
+                    <p class="medicine-brief">用于缓解关节炎、肌肉疼痛症状</p>
+                    <div class="medicine-price-box">
+                        <span class="medicine-price">¥29.9</span>
+                        <span class="medicine-sales">月销 760+</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="medicine-item" data-id="5" data-category="vitamin">
+                
+                <div class="medicine-info">
+                    <h3>复合维生素B片</h3>
+                    <p class="medicine-brief">补充多种B族维生素，改善亚健康状态</p>
+                    <div class="medicine-price-box">
+                        <span class="medicine-price">¥45.0</span>
+                        <span class="medicine-sales">月销 1050+</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="medicine-item" data-id="6" data-category="cold">
+                
+                <div class="medicine-info">
+                    <h3>板蓝根颗粒</h3>
+                    <p class="medicine-brief">清热解毒，凉血利咽，用于风热感冒</p>
+                    <div class="medicine-price-box">
+                        <span class="medicine-price">¥22.5</span>
+                        <span class="medicine-sales">月销 1500+</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">下一页 &raquo;</a>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 智能药品售卖机系统</p>
+        </footer>
+    <script src="medicine-script.js"></script>
+</body>
+</html>

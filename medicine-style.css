@@ -1,0 +1,600 @@
+/* 药品购买页面样式 */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #2c3e50;
+    --light-gray: #ecf0f1;
+    --border-color: #e0e0e0;
+    --hover-color: #f5f9ff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* 搜索栏 */
+.search-bar {
+    display: flex;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-bar button:hover {
+    background-color: #2980b9;
+}
+
+/* 筛选选项 */
+.filter-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filter-options select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: white;
+    min-width: 150px;
+}
+
+/* 药品列表 */
+.medicine-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.medicine-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.medicine-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.medicine-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.medicine-item:hover .medicine-image img {
+    transform: scale(1.05);
+}
+
+.medicine-info {
+    padding: 1rem;
+}
+
+.medicine-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.medicine-brief {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    height: 2.8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.medicine-price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medicine-price {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.medicine-sales {
+    color: #95a5a6;
+    font-size: 0.8rem;
+}
+
+/* 分页 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.pagination a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: var(--hover-color);
+}
+
+.pagination a.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: #7f8c8d;
+}
+
+/* 药品详情页样式 */
+.detail-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.medicine-detail-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.medicine-detail-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.medicine-detail-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.image-thumbnails {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.thumbnail.active {
+    border-color: var(--primary-color);
+    opacity: 1;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+}
+
+.medicine-detail-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.medicine-price-large {
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 0.5rem;
+}
+
+.price-symbol {
+    font-size: 1.5rem;
+    vertical-align: super;
+}
+
+.medicine-sales-info {
+    display: flex;
+    gap: 1.5rem;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.medicine-spec, .medicine-quantity {
+    margin-bottom: 1.5rem;
+}
+
+.medicine-spec h3, .medicine-quantity h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #7f8c8d;
+}
+
+.spec-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.spec-option {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.spec-option.active {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: var(--hover-color);
+}
+
+#quantity-input {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.stock {
+    color: #7f8c8d;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-add-cart, .btn-buy-now {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.btn-add-cart {
+    background-color: #fff4f4;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+.btn-buy-now {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-add-cart:hover {
+    background-color: #ffe6e6;
+}
+
+.btn-buy-now:hover {
+    background-color: #c0392b;
+}
+
+/* 详情选项卡 */
+.medicine-detail-tabs {
+    margin-top: 3rem;
+}
+
+.tab-headers {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.tab-header {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+}
+
+.tab-header.active {
+    color: var(--primary-color);
+}
+
+.tab-header.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.tab-panel {
+    display: none;
+    padding: 1rem 0;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.tab-panel h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.tab-panel p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.tab-panel ol, .tab-panel ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tab-panel li {
+    margin-bottom: 0.5rem;
+}
+
+/* 评价部分 */
+.review-summary {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-score {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.review-stars {
+    color: #f39c12;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.review-stars.small {
+    font-size: 1rem;
+}
+
+.star {
+    position: relative;
+}
+
+.star.filled {
+    color: #f39c12;
+}
+
+.star.half-filled {
+    position: relative;
+    color: #ecf0f1;
+}
+
+.star.half-filled::before {
+    content: '★';
+    position: absolute;
+    color: #f39c12;
+    width: 50%;
+    overflow: hidden;
+}
+
+.review-count {
+    color: #7f8c8d;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.review-item {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.review-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.review-content {
+    flex: 1;
+}
+
+.review-text {
+    margin: 0.5rem 0 1rem;
+}
+
+.review-date {
+    color: #95a5a6;
+    font-size: 0.8rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .medicine-detail-top {
+        grid-template-columns: 1fr;
+    }
+    
+    .medicine-detail-image img {
+        height: 300px;
+    }
+    
+    .tab-header {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .review-item {
+        flex-direction: column;
+    }
+    
+    .review-user {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .user-avatar {
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线上问诊 - 智能药品售卖机</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>线上问诊</h1>
+            <p>请选择问诊方式</p>
+            <a href="index.html" class="back-btn">返回首页</a>
+        </header>
+        
+        <main class="menu">
+            <div class="menu-item" id="ai-consultation" onclick="window.location.href='ai-consultation.html'">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 15C14.2091 15 16 13.2091 16 11C16 8.79086 14.2091 7 12 7C9.79086 7 8 8.79086 8 11C8 13.2091 9.79086 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 20V19C5 16.7909 6.79086 15 9 15H15C17.2091 15 19 16.7909 19 19V20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h2>AI问诊</h2>
+                <p>智能医疗咨询服务</p>
+            </div>
+            
+            <div class="menu-item" id="video-consultation" onclick="window.location.href='video-consultation.html'">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 10L19.5528 7.72361C20.2177 7.39116 21 7.87465 21 8.61803V15.382C21 16.1253 20.2177 16.6088 19.5528 16.2764L15 14M5 18H13C14.1046 18 15 17.1046 15 16V8C15 6.89543 14.1046 6 13 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h2>校医院问诊</h2>
+                <p>在线视频咨询服务</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 智能药品售卖机系统</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

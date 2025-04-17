@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校医院问诊 - 智能药品售卖机</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .chat-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .call-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .call-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .call-button:hover {
+            background: #45a049;
+        }
+
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 70%;
+        }
+
+        .message.received {
+            background: #f1f1f1;
+            margin-right: auto;
+        }
+
+        .message.sent {
+            background: #e3f2fd;
+            margin-left: auto;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .chat-input button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #2196F3;
+            color: white;
+            cursor: pointer;
+        }
+
+        .chat-input button:hover {
+            background: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>校医院问诊</h1>
+            <a href="online-consultation.html" class="back-btn">返回选择</a>
+        </header>
+        
+        <div class="chat-container">
+            <div class="call-buttons">
+                <button class="call-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.4371 20.9018 21 20.2091 21 19.4182V16.7686C21 16.1407 20.5544 15.5906 19.9445 15.4689L16.5389 14.7209C15.9853 14.6094 15.4173 14.8133 15.0838 15.2464L14.4837 16.0493C14.0859 16.5687 13.4111 16.7973 12.8125 16.625C10.6868 15.9832 8.01683 13.3132 7.375 11.1875C7.20273 10.5889 7.43127 9.91412 7.95074 9.51627L8.75357 8.91622C9.18671 8.58271 9.39062 8.01469 9.27906 7.46114L8.53111 4.05552C8.40942 3.44565 7.85932 3 7.23144 3H4.58182C3.79094 3 3.09815 3.56287 3.04185 4.35171C3.01413 4.73086 3 5.11377 3 5.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    语音通话
+                </button>
+                <button class="call-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 10L19.5528 7.72361C20.2177 7.39116 21 7.87465 21 8.61803V15.382C21 16.1253 20.2177 16.6088 19.5528 16.2764L15 14M5 18H13C14.1046 18 15 17.1046 15 16V8C15 6.89543 14.1046 6 13 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    视频通话
+                </button>
+            </div>
+            
+            <div class="chat-messages">
+                <div class="message received">
+                    您好！我是校医院在线医生，请问有什么可以帮您？
+                </div>
+                <div class="message sent">
+                    医生您好，我最近感觉有些头痛。
+                </div>
+                <div class="message received">
+                    请详细描述一下您的症状，比如持续时间、疼痛部位等。
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" placeholder="输入消息...">
+                <button>发送</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 智能药品售卖机系统</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
