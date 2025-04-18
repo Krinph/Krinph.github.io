@@ -1,0 +1,158 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #5AB1BB;
+    --accent-color: #F39C12;
+    --text-color: #2C3E50;
+    --light-gray: #ECF0F1;
+    --border-color: #BDC3C7;
+    --success-color: #27AE60;
+    --error-color: #E74C3C;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: var(--secondary-color);
+}
+
+.reservation-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px dashed var(--border-color);
+    border-radius: 6px;
+    background: var(--light-gray);
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: var(--primary-color);
+    background: #F5F9FF;
+}
+
+.form-tip {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #7F8C8D;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-submit {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: #95A5A6;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .reservation-form {
+        padding: 1.5rem;
+    }
+    
+    .btn-submit {
+        width: 100%;
+    }
+}

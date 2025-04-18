@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>药品预约 - 智能药品售卖机</title>
+    <link rel="stylesheet" href="reservation-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>慢性病药品预约</h1>
+            <a href="detail.html" class="back-btn">返回详情</a>
+        </header>
+        
+        <main class="reservation-form">
+            <form id="reservationForm" onsubmit="handleSubmit(event);">
+                <div class="form-group">
+                    <label for="medicine-name">药品名称</label>
+                    <input type="text" id="medicine-name" name="medicine-name" required placeholder="请输入需要预约的药品名称">
+                </div>
+                
+                <div class="form-group">
+                    <label for="hospital-proof">医院证明</label>
+                    <input type="file" id="hospital-proof" name="hospital-proof" required accept="image/*,.pdf">
+                    <p class="form-tip">请上传医院开具的处方或证明文件（支持图片或PDF格式）</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="remarks">备注说明</label>
+                    <textarea id="remarks" name="remarks" placeholder="请输入其他补充说明（选填）"></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">提交预约</button>
+                </div>
+            </form>
+        </main>
+        
+        <footer>
+            <p>&copy; 智能药品售卖机系统</p>
+        </footer>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            // 获取表单数据
+            const formData = new FormData(event.target);
+            
+            // 这里可以添加表单验证逻辑
+            const medicineName = formData.get('medicine-name');
+            const hospitalProof = formData.get('hospital-proof');
+            
+            if (!medicineName || !hospitalProof) {
+                alert('请填写必要信息');
+                return;
+            }
+            
+            // TODO: 发送预约请求到服务器
+            alert('预约提交成功！');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
